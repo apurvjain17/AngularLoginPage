@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Timestamp</th>
+                <th scope="col">User</th>
+                <th scope="col">Log</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let log of logs let i = index" [attr.data-index]="i">
+                <td>{{i}}</td>
+                <th scope="row">{{log.timestamp}}</th>
+                <td>{{log.user}}</td>
+                <td>{{log.log}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
