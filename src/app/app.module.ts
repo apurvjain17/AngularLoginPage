@@ -4,6 +4,7 @@ import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import {ListingComponent} from './LogListingComponent/listing.component'
 
@@ -14,9 +15,10 @@ import {ListingComponent} from './LogListingComponent/listing.component'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+     HttpClientModule
   ],
-  providers: [],
+  providers: [LoginComponent],
   bootstrap: [LoginComponent]
 })
 export class AppModule { }

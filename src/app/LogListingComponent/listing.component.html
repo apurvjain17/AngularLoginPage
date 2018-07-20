@@ -15,9 +15,9 @@
         <tbody>
             <tr *ngFor = "let log of logs let i = index" [attr.data-index]="i">
                 <td>{{i}}</td>
-                <th scope="row">{{log.timestamp}}</th>
-                <td>{{log.user}}</td>
-                <td>{{log.log}}</td>
+                <th scope="row">{{log[0]}}</th>
+                <td>{{log[1]}}</td>
+                <td>{{log[2]}}</td>
             </tr>
         </tbody>
     </table>
