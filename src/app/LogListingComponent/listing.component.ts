@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from "@angular/core";
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 // import * as fs from "fs";
 
 @Component({
@@ -9,7 +10,9 @@ import { Injectable } from "@angular/core";
 })
 
 export class ListingComponent{
-    constructor(private http: HttpClient) {
+    url: SafeResourceUrl;
+    constructor(private http: HttpClient, sanitizer: DomSanitizer) {
+        this.url = sanitizer.bypassSecurityTrustResourceUrl('https://www.google.co.in/output=embed');
         // let content = fs.readFileSync('./log.csv').toString();
         console.log('inside constructor');
         // var myReader: FileReader = new FileReader();

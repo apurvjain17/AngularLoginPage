@@ -16,7 +16,7 @@ import {ListingComponent} from './LogListingComponent/listing.component'
   imports: [
     BrowserModule,
     FormsModule,
-     HttpClientModule
+    HttpClientModule
   ],
   providers: [LoginComponent],
   bootstrap: [LoginComponent]
